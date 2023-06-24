@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "excludedTypes": "Request;Exception",
+        "isEnabled": true
+      }
+    },
+    "logLevel": {
+      "KeyVault.Acmebot": "Warning"
+    }
+  },
+  "extensions": {
+    "durableTask": {
+      "useGracefulShutdown": true
+    },
+    "http": {
+      "routePrefix": "",
+      "customHeaders": {
+        "Cache-Control": "no-store"
+      }
+    }
+  }
+}
